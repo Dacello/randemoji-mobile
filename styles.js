@@ -1,17 +1,18 @@
 import {StyleSheet} from 'react-native'
-import {paleGray, white, blue} from './colors'
+import {darkestBlue, white, blue} from './colors'
 
 export default StyleSheet.create({
   container: {
     padding: 25,
     paddingTop: 100,
-    backgroundColor: paleGray,
+    backgroundColor: darkestBlue,
     height: '100%',
   },
   header: {
     padding: 10,
   },
   headerText: {
+    color: white,
     fontSize: 30,
     fontWeight: '600',
     textAlign: 'center',
@@ -24,7 +25,7 @@ export default StyleSheet.create({
   button: {
     paddingVertical: 20,
     borderRadius: 5,
-    backgroundColor: blue,
+    backgroundColor: "#6b7db3",
     position: 'absolute',
     bottom: 50,
     right: 37,

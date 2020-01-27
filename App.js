@@ -10,7 +10,8 @@ import React from 'react';
 import {
   View,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
+  StatusBar,
 } from 'react-native';
 
 import {connectChannel, leaveChannel} from './channels'
@@ -42,16 +43,18 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle = "light-content" />
         <View style={styles.header}>
           <Text style={styles.headerText}>{this.headerText}</Text>
         </View>
         <Text style={styles.emoji}>{this.state.currentEmoji}</Text>
-        <TouchableHighlight
+        <TouchableOpacity
+          
           style={styles.button}
           onPress={this.sendRandomEmoji}
         >
-          <Text style={styles.buttonText}> Send Randmoji</Text>
-        </TouchableHighlight>
+          <Text style={styles.buttonText}> Send Randemoji</Text>
+        </TouchableOpacity>
       </View>
     );
   }
