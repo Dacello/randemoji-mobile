@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import AsyncStorage from '@react-native-community/async-storage'
 import {Socket} from 'phoenix'
 
 /**
@@ -8,7 +7,7 @@ import {Socket} from 'phoenix'
  * @returns {Object} channel that was joined
  **/
 export async function connectChannel(channelName) {
-    const socket = new Socket('https://localhost:4000/socket')
+    const socket = new Socket('http://localhost:4000/socket')
     const channel = socket.channel(channelName, {})
 
     socket.connect()
