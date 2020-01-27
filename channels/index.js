@@ -13,7 +13,7 @@ export async function connectChannel(channelName) {
     socket.connect()
 
     channel.join()
-      .receive('ok', ({messages}) => console.log(`Joined ${channelName} successfully`, messages))
+      .receive('ok', ({messages}) => console.log(`Joined ${channelName} successfully`))
       .receive('error', (resp) => console.log(`ERROR connecting to ${channelName}`, resp))
       .receive('timeout', (resp) => console.log(`TIMEOUT connecting to ${channelName}`, resp))
 
